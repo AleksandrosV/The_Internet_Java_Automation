@@ -9,6 +9,7 @@ public class WelcomePage extends BasePageObject {
 	private String pageUrl = "https://the-internet.herokuapp.com";
 	private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
 	private By checkboxesLinkLocator = By.linkText("Checkboxes");
+	private By dragAndDropLinkLocator = By.linkText("Drag and Drop");
 	private By dropdownLinkLocator = By.linkText("Dropdown");
 	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
 	private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
@@ -37,6 +38,13 @@ public class WelcomePage extends BasePageObject {
 		log.info("Clicking Checkboxes link on Welcome Page");
 		click(checkboxesLinkLocator);
 		return new CheckboxesPage(driver, log);
+	}
+
+	/** Open DragAndDropPage by clicking on Drag and Drop Link */
+	public DragAndDropPage clickDragAndDropLink() {
+		log.info("Clicking Drag and Drop link on Welcome Page");
+		click(dragAndDropLinkLocator);
+		return new DragAndDropPage(driver, log);
 	}
 
 	public DropdownPage clickDropdownLink() {

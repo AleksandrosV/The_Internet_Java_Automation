@@ -153,15 +153,6 @@ public class BasePageObject {
 		jsExecutor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	}
 
-	/** Refresh the page a specified number of times */
-	public void refreshPage(int numberOfTimes) {
-		for (int i = 0; i < numberOfTimes; i++) {
-			log.info("Refreshing page - Attempt #" + (i + 1));
-			driver.navigate().refresh();
-		}
-		log.info("Page refreshed " + numberOfTimes + " times.");
-	}
-
 	/** Drag 'from' element to 'to' element */
 	protected void performDragAndDrop(By from, By to) {
 		// Actions action = new Actions(driver);

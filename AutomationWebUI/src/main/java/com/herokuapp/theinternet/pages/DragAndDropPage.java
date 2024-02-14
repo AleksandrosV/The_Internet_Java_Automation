@@ -6,20 +6,11 @@ import org.openqa.selenium.WebDriver;
 
 public class DragAndDropPage extends BasePageObject {
 
-	private String pageUrl = "http://the-internet.herokuapp.com/drag_and_drop";
-
 	private By columnA = By.id("column-a");
 	private By columnB = By.id("column-b");
 
 	public DragAndDropPage(WebDriver driver, Logger log) {
 		super(driver, log);
-	}
-
-	/** Open DragAndDropPage with it's url */
-	public void openPage() {
-		log.info("Opening page: " + pageUrl);
-		openUrl(pageUrl);
-		log.info("Page opened!");
 	}
 
 	/** Drag A box and drop it on B box */
@@ -30,7 +21,7 @@ public class DragAndDropPage extends BasePageObject {
 
 	/** Drag B box and drop it on A box */
 	public void dragBtoA() {
-		log.info("Drag and drop A box on B box");
+		log.info("Drag and drop B box on A box");
 		performDragAndDrop(columnB, columnA);
 	}
 

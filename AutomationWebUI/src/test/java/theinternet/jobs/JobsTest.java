@@ -10,14 +10,13 @@ public class JobsTest extends TestUtilities {
 
 	@Test
 	public void refreshPageTest() {
-		log.info("Starting JobsPage");
+		log.info("Verify that the page is refreshed");
 		JobsPage jobsPage = new JobsPage(driver, log);
-		jobsPage.openPage("https://www.jobs.bg/job/7265166");
+		jobsPage.openPage();
 		// Get the initial count text
 		String initialCountText = jobsPage.getCountText();
 		log.info("Initial Count Text: " + initialCountText);
-		// Refresh the page
-		jobsPage.refreshPage(1);
+		refreshPage(1);
 		// Get the new count text after refresh
 		String newCountText = jobsPage.getCountText();
 		log.info("New Count Text: " + newCountText);

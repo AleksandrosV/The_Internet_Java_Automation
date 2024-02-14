@@ -24,6 +24,15 @@ public class TestUtilities extends BaseTest {
 			e.printStackTrace();
 		}
 	}
+	
+	/** Refresh the page a specified number of times */
+	public void refreshPage(int numberOfTimes) {
+		for (int i = 0; i < numberOfTimes; i++) {
+			log.info("Refreshing page - Attempt #" + (i + 1));
+			driver.navigate().refresh();
+		}
+		log.info("Page refreshed " + numberOfTimes + " times.");
+	}
 
 	@DataProvider(name = "files")
 	protected static Object[][] files() {
