@@ -11,9 +11,10 @@ public class WelcomePage extends BasePageObject {
 	private By checkboxesLinkLocator = By.linkText("Checkboxes");
 	private By dragAndDropLinkLocator = By.linkText("Drag and Drop");
 	private By dropdownLinkLocator = By.linkText("Dropdown");
+	private By editorLinkLocator = By.linkText("WYSIWYG Editor");
+	private By horizontalSliderLinkLocator = By.linkText("Horizontal Slider");
 	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
 	private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
-	private By editorLinkLocator = By.linkText("WYSIWYG Editor");
 
 	public WelcomePage(WebDriver driver, Logger log) { // Constructor
 		super(driver, log);
@@ -56,6 +57,12 @@ public class WelcomePage extends BasePageObject {
 		log.info("Clicking Dropdown link on Welcome Page");
 		click(dropdownLinkLocator);
 		return new DropdownPage(driver, log);
+	}
+	
+	public HorizontalSliderPage clickHorizontalLink() {
+		log.info("Clicking Dropdown link on Welcome Page");
+		click(horizontalSliderLinkLocator);
+		return new HorizontalSliderPage(driver, log);
 	}
 
 	public JavaScriptAlertsPage clickJavaScriptAlertsLink() {
