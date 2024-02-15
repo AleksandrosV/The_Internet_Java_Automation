@@ -48,7 +48,6 @@ public class BaseTest {
 		this.testName = testName;
 		this.testMethodName = method.getName();
 
-		log.info("Open Application");
 		welcomePage = new WelcomePage(driver, log);
 		welcomePage.openPage();
 	}

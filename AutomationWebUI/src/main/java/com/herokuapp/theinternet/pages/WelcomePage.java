@@ -15,6 +15,7 @@ public class WelcomePage extends BasePageObject {
 	private By horizontalSliderLinkLocator = By.linkText("Horizontal Slider");
 	private By hoversLinkLocator = By.linkText("Hovers");
 	private By jsErrorLocator = By.linkText("JavaScript onload event error");
+	private By keyPressesLocator = By.linkText("Key Presses");
 	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
 	private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
 
@@ -72,6 +73,11 @@ public class WelcomePage extends BasePageObject {
 	public JSErrorPage clickJsErrorLink() {
 		click(jsErrorLocator);
 		return new JSErrorPage(driver, log);
+	}
+
+	public KeyPressesPage clickKeyPressesLink() {
+		click(keyPressesLocator);
+		return new KeyPressesPage(driver, log);
 	}
 
 	public JavaScriptAlertsPage clickJavaScriptAlertsLink() {
