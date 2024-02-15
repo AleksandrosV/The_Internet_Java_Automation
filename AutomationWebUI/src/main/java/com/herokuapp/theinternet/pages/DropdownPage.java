@@ -19,16 +19,7 @@ public class DropdownPage extends BasePageObject {
 		log.info("Selecting option " + i + " from dropdown");
 		WebElement dropdownElement = find(dropdown);
 		Select dropdown = new Select(dropdownElement);
-
-		// There are three ways to use Select class
-		// #1
-		// dropdown.selectByIndex(i);
-
-		// #2
 		dropdown.selectByValue("" + i);
-
-		// #3
-		// dropdown.selectByVisibleText("Option " + i);
 	}
 
 	/** This method returns selected option in dropdown as a string */
