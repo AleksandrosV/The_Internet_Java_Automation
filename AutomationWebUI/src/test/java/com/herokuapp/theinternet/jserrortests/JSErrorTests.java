@@ -7,25 +7,23 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.herokuapp.theinternet.base.TestUtilities;
-import com.herokuapp.theinternet.pages.JSErrorPage;
 
 public class JSErrorTests extends TestUtilities {
 	@Test
 	public void jsErrorTest() {
-		log.info("Starting jsErrorTest");
+		log.info("Verify that the JS page has not JS errors");
 		SoftAssert softAssert = new SoftAssert();
-
-		// Open JSErrorPage
-		JSErrorPage jSErrorPage = new JSErrorPage(driver, log);
-		jSErrorPage.openPage();
-
-		// Get logs
+		welcomePage.clickJsErrorLink();
 		List<LogEntry> logs = getBrowserLogs();
 
-		// Verifying there are no JavaScript errors in console
 		for (LogEntry logEntry : logs) {
 			if (logEntry.getLevel().toString().equals("SEVERE")) {
 				softAssert.fail("Severe error: " + logEntry.getMessage());
+				// Print log to console
+				System.out.println("Console Log - SEVERE: " + logEntry.getMessage());
+			} else {
+				// Print other logs to console
+				System.out.println("Console Log - " + logEntry.getLevel() + ": " + logEntry.getMessage());
 			}
 		}
 		softAssert.assertAll();
