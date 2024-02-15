@@ -13,6 +13,7 @@ public class WelcomePage extends BasePageObject {
 	private By dropdownLinkLocator = By.linkText("Dropdown");
 	private By editorLinkLocator = By.linkText("WYSIWYG Editor");
 	private By horizontalSliderLinkLocator = By.linkText("Horizontal Slider");
+	private By hoversLinkLocator = By.linkText("Hovers");
 	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
 	private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
 
@@ -58,11 +59,23 @@ public class WelcomePage extends BasePageObject {
 		click(dropdownLinkLocator);
 		return new DropdownPage(driver, log);
 	}
-	
+
+	public EditorPage clickWYSIWYGEditorLink() {
+		log.info("Clicking WYSIWYG Editor link on Welcome Page");
+		click(editorLinkLocator);
+		return new EditorPage(driver, log);
+	}
+
 	public HorizontalSliderPage clickHorizontalLink() {
 		log.info("Clicking Dropdown link on Welcome Page");
 		click(horizontalSliderLinkLocator);
 		return new HorizontalSliderPage(driver, log);
+	}
+
+	public HoversPage clickHoversLink() {
+		log.info("Clicking Dropdown link on Welcome Page");
+		click(hoversLinkLocator);
+		return new HoversPage(driver, log);
 	}
 
 	public JavaScriptAlertsPage clickJavaScriptAlertsLink() {
@@ -75,11 +88,5 @@ public class WelcomePage extends BasePageObject {
 		log.info("Clicking Multiple Windows link on Welcome Page");
 		click(multipleWindowsLinkLocator);
 		return new WindowsPage(driver, log);
-	}
-
-	public EditorPage clickWYSIWYGEditorLink() {
-		log.info("Clicking WYSIWYG Editor link on Welcome Page");
-		click(editorLinkLocator);
-		return new EditorPage(driver, log);
 	}
 }

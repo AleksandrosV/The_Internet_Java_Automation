@@ -9,7 +9,7 @@ import com.herokuapp.theinternet.pages.HorizontalSliderPage;
 public class HorizontalSliderTests extends TestUtilities {
 	@Test
 	public void sliderTest() {
-		log.info("Starting sliderTest");
+		log.info("Verify that slider can be moved");
 		HorizontalSliderPage horizontalSliderPage = welcomePage.clickHorizontalLink();
 		String value = "3.5";
 		horizontalSliderPage.setSliderTo(value);

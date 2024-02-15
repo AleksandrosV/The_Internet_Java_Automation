@@ -8,22 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HoversPage extends BasePageObject {
-
-	private String pageUrl = "http://the-internet.herokuapp.com/hovers";
-
 	private By avatarLocator = By.xpath("//div[@class='figure']");
-	// using '.' will find only one link wich is under second avatar
 	private By viewProfileLinkLocator = By.xpath(".//a[contains(text(),'View profile')]");
 
 	public HoversPage(WebDriver driver, Logger log) {
 		super(driver, log);
-	}
-
-	/** Open HoversPage with it's url */
-	public void openPage() {
-		log.info("Opening page: " + pageUrl);
-		openUrl(pageUrl);
-		log.info("Page opened!");
 	}
 
 	/** Open specified user profile */
