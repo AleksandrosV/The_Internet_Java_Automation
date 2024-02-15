@@ -15,7 +15,6 @@ import org.testng.annotations.DataProvider;
 
 // For keeping different helper methods used in some tests not all
 public class TestUtilities extends BaseTest {
-
 	// STATIC SLEEP
 	protected void sleep(long millis) {
 		try {
@@ -24,7 +23,7 @@ public class TestUtilities extends BaseTest {
 			e.printStackTrace();
 		}
 	}
-	
+
 	/** Refresh the page a specified number of times */
 	public void refreshPage(int numberOfTimes) {
 		for (int i = 0; i < numberOfTimes; i++) {

@@ -26,6 +26,11 @@ public class WelcomePage extends BasePageObject {
 		log.info("Page opened!");
 	}
 
+	/** Open WelcomePage with given URL */
+	protected void openUrl(String url) {
+		driver.get(url);
+	}
+
 	/** Open LoginPage by clicking on Form Authentication Link */
 	public LoginPage clickFormAuthenticationLink() {
 		log.info("Clicking Form Authentication link on Welcome Page");

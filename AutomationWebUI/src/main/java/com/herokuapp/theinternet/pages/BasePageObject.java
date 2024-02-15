@@ -29,11 +29,6 @@ public class BasePageObject {
 		this.log = log;
 	}
 
-	/** Open page with given URL */
-	protected void openUrl(String url) {
-		driver.get(url);
-	}
-
 	/** Find element using given locator */
 	protected WebElement find(By locator) {
 		return driver.findElement(locator);
@@ -56,11 +51,9 @@ public class BasePageObject {
 		find(locator).sendKeys(text);
 	}
 
-	/** Open page with its URL */
-	public void openPage(String pageUrl) {
-		log.info("Opening page: " + pageUrl);
-		openUrl(pageUrl);
-		log.info("Page opened!");
+	public String getPageTitle() {
+		WebElement exampleElement = driver.findElement(By.className("example")).findElement(By.tagName("h3"));
+		return exampleElement.getText();
 	}
 
 	/** Get URL of current page from browser */

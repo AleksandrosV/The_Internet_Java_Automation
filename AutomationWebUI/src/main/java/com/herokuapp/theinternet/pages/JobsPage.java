@@ -5,12 +5,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class JobsPage extends BasePageObject {
-	
+
 	private String pageUrl = "https://www.jobs.bg/job/7265166";
 	private By countText = By.cssSelector(".count-text");
 
 	public JobsPage(WebDriver driver, Logger log) {
 		super(driver, log);
+	}
+
+	/** Open WelcomePage with given URL */
+	protected void openUrl(String url) {
+		driver.get(url);
 	}
 
 	/** Open JobsPage with it's url */
@@ -19,7 +24,7 @@ public class JobsPage extends BasePageObject {
 		openUrl(pageUrl);
 		log.info("Page opened!");
 	}
-	
+
 	public String getCountText() {
 		return find(countText).getText();
 	}

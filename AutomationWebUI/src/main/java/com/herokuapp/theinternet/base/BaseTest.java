@@ -12,6 +12,8 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
+import com.herokuapp.theinternet.pages.WelcomePage;
+
 // Add this code to add listeners on all test suites automatically
 @Listeners({ com.herokuapp.theinternet.base.TestListener.class })
 public class BaseTest {
@@ -22,6 +24,7 @@ public class BaseTest {
 	protected String testSuiteName;
 	protected String testName;
 	protected String testMethodName;
+	protected WelcomePage welcomePage;
 
 	@Parameters({ "browser", "chromeProfile", "deviceName" })
 	@BeforeMethod(alwaysRun = true)
@@ -44,6 +47,10 @@ public class BaseTest {
 		this.testSuiteName = ctx.getSuite().getName();
 		this.testName = testName;
 		this.testMethodName = method.getName();
+
+		log.info("Open Application");
+		welcomePage = new WelcomePage(driver, log);
+		welcomePage.openPage();
 	}
 
 	@AfterMethod(alwaysRun = true)
