@@ -39,6 +39,7 @@ public class LoginPage extends BasePageObject {
 		waitForVisibilityOf(errorMessageLocator, Duration.ofSeconds(5));
 	}
 
+	/** Return text from fail message */
 	public String getErrorMessageText() {
 		return find(errorMessageLocator).getText();
 	}
