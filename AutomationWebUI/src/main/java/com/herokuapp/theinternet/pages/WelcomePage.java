@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class WelcomePage extends BasePageObject {
 
 	private String pageUrl = "https://the-internet.herokuapp.com";
+	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
 	private By checkboxesLinkLocator = By.linkText("Checkboxes");
 	private By dragAndDropLinkLocator = By.linkText("Drag and Drop");
 	private By dropdownLinkLocator = By.linkText("Dropdown");
@@ -16,7 +17,7 @@ public class WelcomePage extends BasePageObject {
 	private By jsErrorLocator = By.linkText("JavaScript onload event error");
 	private By keyPressesLocator = By.linkText("Key Presses");
 	private By formAuthenticationLinkLocator = By.linkText("Form Authentication");
-	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
+	private By uploadFileLinkLocator = By.linkText("File Upload");
 	private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
 
 	public WelcomePage(WebDriver driver, Logger log) { // Constructor
@@ -33,6 +34,11 @@ public class WelcomePage extends BasePageObject {
 	/** Open WelcomePage with given URL */
 	protected void openUrl(String url) {
 		driver.get(url);
+	}
+
+	public JavaScriptAlertsPage clickJavaScriptAlertsLink() {
+		click(javaScriptAlertsLinkLocator);
+		return new JavaScriptAlertsPage(driver, log);
 	}
 
 	public CheckboxesPage clickCheckboxesLink() {
@@ -80,9 +86,9 @@ public class WelcomePage extends BasePageObject {
 		return new LoginPage(driver, log);
 	}
 
-	public JavaScriptAlertsPage clickJavaScriptAlertsLink() {
-		click(javaScriptAlertsLinkLocator);
-		return new JavaScriptAlertsPage(driver, log);
+	public FileUploaderPage clickFileUploadonLink() {
+		click(uploadFileLinkLocator);
+		return new FileUploaderPage(driver, log);
 	}
 
 	public WindowsPage clickMultipleWindowsLink() {
