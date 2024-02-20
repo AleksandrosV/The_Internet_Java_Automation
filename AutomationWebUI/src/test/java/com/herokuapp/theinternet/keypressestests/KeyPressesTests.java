@@ -13,6 +13,7 @@ public class KeyPressesTests extends TestUtilities {
 		log.info("Verify that Enter key is pressed");
 		KeyPressesPage keyPressesPage = welcomePage.clickKeyPressesLink();
 		keyPressesPage.pressKey(Keys.ENTER);
+		takeScreenshot("Presskey");
 		String result = keyPressesPage.getResultText();
 		Assert.assertTrue(result.equals("You entered: ENTER"),
 				"result is not expected. \nShould be 'You entered: ENTER', but it is '" + result + "'");
