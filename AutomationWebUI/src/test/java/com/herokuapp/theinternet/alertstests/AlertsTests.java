@@ -43,11 +43,11 @@ public class AlertsTests extends TestUtilities {
 		JavaScriptAlertsPage alertsPage = welcomePage.clickJavaScriptAlertsLink();
 		alertsPage.openJSPrompt();
 		String alertMessage = alertsPage.getAlertText();
-		alertsPage.typeTextIntoAlert("Hello Alert, it's Dmitry here");
+		alertsPage.typeTextIntoAlert("Hello Alert, it's Alex here");
 		String result = alertsPage.getResultText();
 		softAssert.assertTrue(alertMessage.equals("I am a JS prompt"),
 				"Alert message is not expected. \nShould be 'I am a JS prompt', but it is '" + alertMessage + "'");
-		softAssert.assertTrue(result.equals("You entered: Hello Alert, it's Dmitry here"),
+		softAssert.assertTrue(result.equals("You entered: Hello Alert, it's Alex here"),
 				"result is not expected. \nShould be 'You entered: Hello Alert, its Dmitry here', but it is '" + result
 						+ "'");
 		softAssert.assertAll();
