@@ -11,6 +11,12 @@ public class JavaScriptAlertsPage extends BasePageObject {
 	private By clickForJSConfirmButtonLocator = By.xpath("//button[text()='Click for JS Confirm']");
 	private By clickForJSPromptButtonLocator = By.xpath("//button[text()='Click for JS Prompt']");
 	private By resultTextLocator = By.id("result");
+	public String jsAlertMessage = "I am a JS Alert";
+	public String jsAlertSuccessMessage = "You successfully clicked an alert";
+	public String jsConfirmMessage = "I am a JS Confirm";
+	public String jsCancelMessage = "You clicked: Cancel";
+	public String jsPromptMessage = "I am a JS prompt";
+	public String writeMessage = "Hello Alert, it's Alex here";
 
 	public JavaScriptAlertsPage(WebDriver driver, Logger log) {
 		super(driver, log);

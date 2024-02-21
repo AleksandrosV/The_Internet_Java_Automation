@@ -15,10 +15,11 @@ public class AlertsTests extends TestUtilities {
 		String alertMessage = alertsPage.getAlertText();
 		alertsPage.acceptAlert();
 		String result = alertsPage.getResultText();
-		softAssert.assertTrue(alertMessage.equals("I am a JS Alert"),
-				"Alert message is not expected. \nShould be 'I am a JS Alert', but it is '" + alertMessage + "'");
-		softAssert.assertTrue(result.equals("You successfully clicked an alert"),
-				"result is not expected. \nShould be 'You successfully clicked an alert', but it is '" + result + "'");
+		softAssert.assertTrue(alertMessage.equals(alertsPage.jsAlertMessage),
+				"Alert message is not expected. \nShould be '" + alertsPage.jsAlertMessage + "', but it is '"
+						+ alertMessage + "'");
+		softAssert.assertTrue(result.equals(alertsPage.jsAlertSuccessMessage), "result is not expected. \nShould be '"
+				+ alertsPage.jsAlertSuccessMessage + "', but it is '" + result + "'");
 		softAssert.assertAll();
 	}
 
@@ -30,10 +31,11 @@ public class AlertsTests extends TestUtilities {
 		String alertMessage = alertsPage.getAlertText();
 		alertsPage.dismissAlert();
 		String result = alertsPage.getResultText();
-		softAssert.assertTrue(alertMessage.equals("I am a JS Confirm"),
-				"Alert message is not expected. \nShould be 'I am a JS Confirm', but it is '" + alertMessage + "'");
-		softAssert.assertTrue(result.equals("You clicked: Cancel"),
-				"result is not expected. \nShould be 'You clicked: Cancel', but it is '" + result + "'");
+		softAssert.assertTrue(alertMessage.equals(alertsPage.jsConfirmMessage),
+				"Alert message is not expected. \nShould be '" + alertsPage.jsConfirmMessage + "', but it is '"
+						+ alertMessage + "'");
+		softAssert.assertTrue(result.equals(alertsPage.jsCancelMessage),
+				"result is not expected. \nShould be '" + alertsPage.jsCancelMessage + "', but it is '" + result + "'");
 		softAssert.assertAll();
 	}
 
@@ -43,13 +45,14 @@ public class AlertsTests extends TestUtilities {
 		JavaScriptAlertsPage alertsPage = welcomePage.clickJavaScriptAlertsLink();
 		alertsPage.openJSPrompt();
 		String alertMessage = alertsPage.getAlertText();
-		alertsPage.typeTextIntoAlert("Hello Alert, it's Alex here");
+		alertsPage.typeTextIntoAlert(alertsPage.writeMessage);
 		String result = alertsPage.getResultText();
-		softAssert.assertTrue(alertMessage.equals("I am a JS prompt"),
-				"Alert message is not expected. \nShould be 'I am a JS prompt', but it is '" + alertMessage + "'");
+		softAssert.assertTrue(alertMessage.equals(alertsPage.jsPromptMessage),
+				"Alert message is not expected. \nShould be '" + alertsPage.jsPromptMessage + "', but it is '"
+						+ alertMessage + "'");
 		softAssert.assertTrue(result.equals("You entered: Hello Alert, it's Alex here"),
-				"result is not expected. \nShould be 'You entered: Hello Alert, its Dmitry here', but it is '" + result
-						+ "'");
+				"result is not expected. \nShould be 'You entered: " + alertsPage.writeMessage + "', but it is '"
+						+ result + "'");
 		softAssert.assertAll();
 	}
 }
