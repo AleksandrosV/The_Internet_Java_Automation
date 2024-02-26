@@ -14,7 +14,6 @@ import org.testng.annotations.Parameters;
 
 import com.herokuapp.theinternet.pages.WelcomePage;
 
-// Add this code to add listeners on all test suites automatically
 @Listeners({ com.herokuapp.theinternet.base.TestListener.class })
 public class BaseTest {
 
@@ -34,14 +33,7 @@ public class BaseTest {
 		log = LogManager.getLogger(testName);
 
 		BrowserDriverFactory factory = new BrowserDriverFactory(browser, log);
-		if (profile != null) {
-			driver = factory.createChromeWithProfile(profile);
-		} else if (deviceName != null) {
-			driver = factory.createChromeWithMobileEmulation(deviceName);
-		} else {
-			driver = factory.createDriver();
-		}
-
+		driver = factory.createDriver();
 		driver.manage().window().maximize();
 
 		this.testSuiteName = ctx.getSuite().getName();
@@ -55,7 +47,6 @@ public class BaseTest {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() {
 		log.info("Close driver");
-		// Close browser
 		driver.quit();
 	}
 }

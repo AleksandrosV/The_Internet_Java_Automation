@@ -148,9 +148,6 @@ public class BasePageObject {
 
 	/** Drag 'from' element to 'to' element */
 	protected void performDragAndDrop(By from, By to) {
-		// Actions action = new Actions(driver);
-		// action.dragAndDrop(find(from), find(to)).build().perform();
-
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 		jsExecutor.executeScript(
 				"function createEvent(typeOfEvent) {\n" + "var event =document.createEvent(\"CustomEvent\");\n"

@@ -13,9 +13,7 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.testng.annotations.DataProvider;
 
-// For keeping different helper methods used in some tests not all
 public class TestUtilities extends BaseTest {
-	// STATIC SLEEP
 	protected void sleep(long millis) {
 		try {
 			Thread.sleep(millis);

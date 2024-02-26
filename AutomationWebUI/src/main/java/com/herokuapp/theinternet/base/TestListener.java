@@ -6,7 +6,6 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-// To observe and respond to events that occur during the execution of test cases and test suites. 
 public class TestListener implements ITestListener {
 
 	Logger log;
@@ -39,7 +38,6 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-		// assigning name of test suite
 		this.testName = context.getCurrentXmlTest().getName();
 		this.log = LogManager.getLogger(testName);
 		log.info("[TEST " + testName + " STARTED]");
