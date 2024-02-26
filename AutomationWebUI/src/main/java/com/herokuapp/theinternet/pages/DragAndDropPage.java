@@ -8,7 +8,7 @@ public class DragAndDropPage extends BasePageObject {
 
 	private By columnA = By.id("column-a");
 	private By columnB = By.id("column-b");
-	public String dragAndDropPageTitle = "Drag and Drop";
+	public static final String DRAG_AND_DROP_TITLE = "Drag and Drop";
 
 	public DragAndDropPage(WebDriver driver, Logger log) {
 		super(driver, log);
