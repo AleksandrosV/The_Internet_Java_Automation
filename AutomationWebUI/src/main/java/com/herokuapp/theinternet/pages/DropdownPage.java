@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.Select;
 public class DropdownPage extends BasePageObject {
 
 	private By dropdown = By.id("dropdown");
+	public static final String OPTION_ONE = "Option 1";
+	public static final String OPTION_TWO = "Option 2";
 
 	public DropdownPage(WebDriver driver, Logger log) {
 		super(driver, log);
