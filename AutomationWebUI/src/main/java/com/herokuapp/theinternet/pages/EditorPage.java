@@ -8,6 +8,7 @@ public class EditorPage extends BasePageObject {
 
 	private By editorLocator = By.id("tinymce");
 	private By frame = By.tagName("iframe");
+	public static final String EDITOR_TEXT = "Your content goes here.";
 
 	public EditorPage(WebDriver driver, Logger log) {
 		super(driver, log);

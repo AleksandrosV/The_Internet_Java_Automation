@@ -13,7 +13,7 @@ public class EditorTests extends TestUtilities {
 		welcomePage.scrollToBottom();
 		EditorPage editorPage = welcomePage.clickWYSIWYGEditorLink();
 		String editorText = editorPage.getEditorText();
-		Assert.assertTrue(editorText.equals("Your content goes here."),
+		Assert.assertTrue(editorText.equals(EditorPage.EDITOR_TEXT),
 				"Editor default text is not expected. It is: " + editorText);
 	}
 }
