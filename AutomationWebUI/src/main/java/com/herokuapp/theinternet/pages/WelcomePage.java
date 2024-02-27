@@ -4,9 +4,10 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.herokuapp.theinternet.base.AppConfig;
+
 public class WelcomePage extends BasePageObject {
 
-	private String pageUrl = "https://the-internet.herokuapp.com";
 	private By javaScriptAlertsLinkLocator = By.linkText("JavaScript Alerts");
 	private By checkboxesLinkLocator = By.linkText("Checkboxes");
 	private By dragAndDropLinkLocator = By.linkText("Drag and Drop");
@@ -26,8 +27,8 @@ public class WelcomePage extends BasePageObject {
 
 	/** Open WelcomePage with it's url */
 	public void openPage() {
-		log.info("Opening page: " + pageUrl);
-		openUrl(pageUrl);
+		log.info("Opening page: " + AppConfig.BASE_URL);
+		openUrl(AppConfig.BASE_URL);
 		log.info("Page opened!");
 	}
 

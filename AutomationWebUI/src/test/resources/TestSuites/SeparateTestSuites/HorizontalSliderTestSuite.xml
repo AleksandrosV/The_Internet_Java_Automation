@@ -1,20 +1,19 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="HorizontalSliderTestSuite" verbose="1">
-
-
+<suite name="HorizontalSliderTestSuite" verbose="1" parallel="tests">
 	<test name="HorizontalSliderTests-CH">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.herokuapp.theinternet.horizontalslidertests.HorizontalSliderTests" />
+			<class
+				name="com.herokuapp.theinternet.horizontalslidertests.HorizontalSliderTests" />
 		</classes>
 	</test>
 
 	<test name="HorizontalSliderTests-FF">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="com.herokuapp.theinternet.horizontalslidertests.HorizontalSliderTests" />
+			<class
+				name="com.herokuapp.theinternet.horizontalslidertests.HorizontalSliderTests" />
 		</classes>
 	</test>
-
 </suite>

@@ -25,10 +25,9 @@ public class BaseTest {
 	protected String testMethodName;
 	protected WelcomePage welcomePage;
 
-	@Parameters({ "browser", "chromeProfile", "deviceName" })
+	@Parameters({ "browser" })
 	@BeforeMethod(alwaysRun = true)
-	public void setUp(Method method, @Optional("chrome") String browser, @Optional String profile,
-			@Optional String deviceName, ITestContext ctx) {
+	public void setUp(Method method, @Optional("chrome") String browser, ITestContext ctx) {
 		String testName = ctx.getCurrentXmlTest().getName();
 		log = LogManager.getLogger(testName);
 
