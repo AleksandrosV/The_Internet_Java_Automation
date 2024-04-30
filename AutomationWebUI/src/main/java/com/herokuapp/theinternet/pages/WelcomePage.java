@@ -21,7 +21,7 @@ public class WelcomePage extends BasePageObject {
 	private By uploadFileLinkLocator = By.linkText("File Upload");
 	private By multipleWindowsLinkLocator = By.linkText("Multiple Windows");
 
-	public WelcomePage(WebDriver driver, Logger log) { // Constructor
+	public WelcomePage(WebDriver driver, Logger log) { // Constructor is invoking the constructor of the superclass (BasePage) with the provided driver and log parameters.
 		super(driver, log);
 	}
 
