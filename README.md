@@ -29,7 +29,6 @@ Welcome to the The Internet project! This project aims to provide a robust frame
 
 ## Project Structure
 
-\`\`\`plaintext
 Java_automation/
 └── AutomationWebUI/
     ├── src/
@@ -41,7 +40,6 @@ Java_automation/
     │           └── TestSuites/
     │               └── FullUITestSuite.xml
     └── pom.xml
-\`\`\`
 
 - `src/main/java`: Contains the main Java code.
 - `src/test/java`: Contains the test code.
