@@ -88,6 +88,9 @@ To integrate this project with Jenkins:
 4. **Post-build Actions**:
    - Add "Publish TestNG Results" and configure the pattern to `**/target/surefire-reports/testng-results.xml`.
 
+5. **Install Necessary Jenkins Plugins**:
+   - Go to Manage Jenkins -> Manage Plugins and ensure the following plugins are installed: `Maven Integration plugin` `TestNG Results plugin`.
+
 ## Contributing
 
 We welcome contributions! Please follow these steps to contribute:
