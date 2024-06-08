@@ -1,24 +1,56 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Maven output directories
 /target/
+/dependency-reduced-pom.xml
+
+# Eclipse files
 .classpath
 .project
 .settings/
+
+# IntelliJ files
 .idea/
-*.class
+
+# Maven backup files
 pom.xml.backup
-release.properties
 pom.xml.releaseBackup
 pom.xml.tag
 pom.xml.versionsBackup
 pom.xml.next
-dependency-reduced-pom.xml
+release.properties
 buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
+
+# Maven output files
 checkstyle-suppressions.xml
 /test-output/
 /bin/
-*.log
-.mvn/
+
+# Eclipse metadata
 .metadata/
-testng.xml
+
+# OS-specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# TestNG files
 testng-failed.xml
+
+# IDE-specific folders and files
+.mvn/
+
+# Temp files
+*.tmp
+*.bak
+*.swp
