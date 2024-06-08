@@ -3,7 +3,7 @@
 
 ## Project Overview
 
-Welcome to the The Internet project! This project aims to provide a robust framework for automating web UI tests using Selenium WebDriver, TestNG, and other essential tools. The project is designed to be modular, scalable, and easy to maintain.
+Welcome to the The Internet project! This project aims to provide a robust framework for automating web UI tests of https://the-internet.herokuapp.com/ using Selenium WebDriver, TestNG, and other essential tools. The project is designed to be modular, scalable, and easy to maintain.
 
 ## Table of Contents
 
@@ -45,7 +45,7 @@ Welcome to the The Internet project! This project aims to provide a robust frame
 
 ### Clone the Repository
 
-\`\`\`bash
+\`\`\`
 git clone https://github.com/AleksandrosV/Java_automation.git
 cd Java_automation/AutomationWebUI
 \`\`\`
@@ -54,7 +54,7 @@ cd Java_automation/AutomationWebUI
 
 Ensure you have Maven installed and properly configured. You can verify this by running:
 
-\`\`\`bash
+\`\`\`
 mvn -v
 \`\`\`
 
@@ -62,7 +62,7 @@ mvn -v
 
 To clean the project and run tests, execute the following Maven command:
 
-\`\`\`bash
+\`\`\`
 mvn clean test
 \`\`\`
 
@@ -82,13 +82,13 @@ To integrate this project with Jenkins:
 3. **Add Build Step**:
    - Add a Windows batch command or Shell script (depending on your Jenkins server) with the following commands:
 
-   \`\`\`bash
+   \`\`\`
    cd AutomationWebUI
    mvn clean test
    \`\`\`
 
 4. **Post-build Actions**:
-   - Add "Publish TestNG Results" and configure the pattern to `**/AutomationWebUI/target/surefire-reports/testng-results.xml`.
+   - Add "Publish TestNG Results" and configure the pattern to `**/target/surefire-reports/testng-results.xml`.
 
 ## Contributing
 
