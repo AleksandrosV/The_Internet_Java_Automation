@@ -46,8 +46,7 @@ Welcome to the The Internet project! This project aims to provide a robust frame
 ### Clone the Repository
 
 \`\`\`
-git clone https://github.com/AleksandrosV/Java_automation.git
-cd Java_automation/AutomationWebUI
+git clone https://github.com/AleksandrosV/The_Internet_Java_Automation.git
 \`\`\`
 
 ### Configure Maven
@@ -76,14 +75,13 @@ To integrate this project with Jenkins:
    - Go to Jenkins dashboard and create a new Freestyle project.
 
 2. **Configure Source Code Management**:
-   - Select Git and provide the repository URL: `https://github.com/AleksandrosV/Java_automation.git`
+   - Select Git and provide the repository URL: `https://github.com/AleksandrosV/The_Internet_Java_Automation.git`
    - Set the branch to `main` or any specific branch you are working on.
 
 3. **Add Build Step**:
    - Add a Windows batch command or Shell script (depending on your Jenkins server) with the following commands:
 
    \`\`\`
-   cd AutomationWebUI
    mvn clean test
    \`\`\`
 
