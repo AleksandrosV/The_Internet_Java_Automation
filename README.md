@@ -45,25 +45,19 @@ Welcome to the The Internet project! This project aims to provide a robust frame
 
 ### Clone the Repository
 
-\`\`\`
-git clone https://github.com/AleksandrosV/The_Internet_Java_Automation.git
-\`\`\`
+`git clone https://github.com/AleksandrosV/The_Internet_Java_Automation.git`
 
 ### Configure Maven
 
 Ensure you have Maven installed and properly configured. You can verify this by running:
 
-\`\`\`
-mvn -v
-\`\`\`
+`mvn -v`
 
 ## Running Tests
 
 To clean the project and run tests, execute the following Maven command:
 
-\`\`\`
-mvn clean test
-\`\`\`
+`mvn clean test`
 
 This command will compile the project, execute the tests defined in `FullUITestSuite.xml`, and generate reports.
 
@@ -81,12 +75,13 @@ To integrate this project with Jenkins:
 3. **Add Build Step**:
    - Add a Windows batch command or Shell script (depending on your Jenkins server) with the following commands:
 
-   \`\`\`
-   mvn clean test
-   \`\`\`
+   `mvn clean test`
 
 4. **Post-build Actions**:
    - Add "Publish TestNG Results" and configure the pattern to `**/target/surefire-reports/testng-results.xml`.
+
+5. **Install Necessary Jenkins Plugins**:
+   - Go to Manage Jenkins -> Manage Plugins and ensure the following plugins are installed: `Maven Integration plugin` and `TestNG Results plugin`.
 
 ## Contributing
 
