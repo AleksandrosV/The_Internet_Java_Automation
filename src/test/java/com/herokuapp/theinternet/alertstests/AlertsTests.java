@@ -23,10 +23,10 @@ public class AlertsTests extends TestUtilities {
 		String alertMessage = alertsPage.getAlertText();
 		alertsPage.acceptAlert();
 		String result = alertsPage.getResultText();
-		softAssert.assertTrue(alertMessage.equals(JavaScriptAlertsPage.JS_ALERT_MESSAGE),
+		softAssert.assertEquals(alertMessage, JavaScriptAlertsPage.JS_ALERT_MESSAGE,
 				"Alert message is not expected. \nShould be '" + JavaScriptAlertsPage.JS_ALERT_MESSAGE
 						+ "', but it is '" + alertMessage + "'");
-		softAssert.assertTrue(result.equals(JavaScriptAlertsPage.JS_ALERT_SUCCESS_MESSAGE),
+		softAssert.assertEquals(result, JavaScriptAlertsPage.JS_ALERT_SUCCESS_MESSAGE,
 				"result is not expected. \nShould be '" + JavaScriptAlertsPage.JS_ALERT_SUCCESS_MESSAGE
 						+ "', but it is '" + result + "'");
 		softAssert.assertAll();
