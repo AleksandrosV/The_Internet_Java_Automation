@@ -17,7 +17,7 @@ public class AlertsTests extends TestUtilities {
 	}
 
 	@Test
-	public void jsAlertTest() {
+	public void jsAlertTestw() {
 		SoftAssert softAssert = new SoftAssert();
 		alertsPage.openJSAlert();
 		String alertMessage = alertsPage.getAlertText();
